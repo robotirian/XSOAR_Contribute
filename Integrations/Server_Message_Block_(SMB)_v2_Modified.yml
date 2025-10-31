@@ -1,0 +1,768 @@
+commonfields:
+  id: Server Message Block (SMB) v2_Modified
+  version: -1
+vcShouldKeepItemLegacyProdMachine: false
+name: Server Message Block (SMB) v2_Modified
+display: Server Message Block (SMB) v2_Modified
+category: Utilities
+image: data:image/png;base64,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
+description: Files and Directories management with an SMB server. Supports SMB2 and
+  SMB3 protocols.
+detaileddescription: |-
+  Configuration
+  -
+  For the configuration, you should configure the server details and credentials either as parameters or as command arguments.
+
+  If the server details were configured both as parameters and as command arguments, the commands argument will be used to set the connection.
+
+  #### Secure Dialect Negotiation Parameter
+
+  ---
+  More information can be found on [SMB3 Secure Dialect Negotiation](https://docs.microsoft.com/en-us/archive/blogs/openspecification/smb3-secure-dialect-negotiation).
+
+
+  ---
+  [View Integration Documentation](https://xsoar.pan.dev/docs/reference/integrations/server-message-block-smb-v2)
+configuration:
+- section: Connect
+  display: Server IP / Hostname (e.g. 1.2.3.4)
+  name: hostname
+  type: 0
+  required: false
+- section: Connect
+  display: Port
+  name: port
+  defaultvalue: "445"
+  type: 0
+  required: false
+- section: Connect
+  display: Domain Controller
+  name: dc
+  type: 0
+  required: false
+  additionalinfo: The domain controller hostname. This is useful for environments
+    with DFS servers as it is used to identify the DFS domain information automatically.
+- section: Connect
+  display: Username
+  name: credentials
+  type: 9
+  required: false
+- section: Connect
+  display: Client GUID
+  name: client_guid
+  type: 0
+  required: false
+  additionalinfo: The client machine name to identify the client to the server on
+    a new connection.
+- section: Connect
+  display: Force Encryption
+  name: encrypt
+  type: 8
+  required: false
+  additionalinfo: Force encryption on the connection, requires SMBv3 or newer on the
+    remote server. Default is "false".
+- section: Connect
+  display: Secure Dialect Negotiation
+  name: require_secure_negotiate
+  defaultvalue: "true"
+  type: 8
+  required: false
+  additionalinfo: Validate the negotiation info when connecting to a share. More information
+    can be found on https://docs.microsoft.com/en-us/archive/blogs/openspecification/smb3-secure-dialect-negotiation
+script:
+  script: |
+    register_module_line('Server Message Block (SMB) v2', 'start', __line__())
+    CONSTANT_PACK_VERSION = '2.0.22'
+    demisto.debug('pack id = SMB, pack version = 2.0.22')
+    import uuid
+
+
+    """ IMPORTS """
+
+
+    import os
+    import smbclient
+    from smbclient import (
+        mkdir,
+        open_file,
+        register_session,
+        remove,
+        rmdir,
+        scandir,
+        rename,
+        stat as smb_stat,  # SMB version for metadata
+    )
+    import fnmatch
+    import stat as py_stat  # Built-in Python module for S_ISDIR
+
+
+    def get_file_name(path):
+        delimiter = "/" if "/" in path else "\\"
+        return path.split(delimiter)[-1]
+
+
+    def handle_path(path):
+        """
+        Stripping the '\\' and '/' characters from a given path.
+        Examples:
+            \\Shared\\123.txt\\ ---> Shared\\123.txt
+            /Shared/123.txt/ ---> Shared/123.txt
+            \\Shared\\123.txt/\\ ---> Shared\\123.txt
+        """
+        return path.strip("\\/")
+
+
+    def create_share_path(hostname, path):
+        r"""
+        Create a path to the shared folder according to the smbprotocol convention: '\\server\share'.
+        For reference see https://github.com/jborean93/smbprotocol/blob/master/examples/high-level/directory-management.py
+        """
+        return rf"\\{hostname}\{path}"
+
+
+    class SMBClient:
+        def __init__(self, hostname, user, password, encrypt, port):
+            self.hostname = hostname
+            self._user = user
+            self._password = password
+            self._encrypt = encrypt
+            self._port = port
+
+        def create_session(
+            self, hostname: str = None, user: str = None, password: str = None, encrypt: bool = False, port: int = None
+        ):
+            register_session(
+                server=hostname or self.hostname,
+                username=user or self._user,
+                password=password or self._password,
+                port=port or self._port,
+                encrypt=encrypt or self._encrypt,
+                auth_protocol="ntlm",
+            )
+
+
+    def test_module(client: SMBClient):
+        client.create_session()
+        return "ok"
+
+
+    def smb_upload(client: SMBClient, args: dict):
+        hostname = args.get("hostname")
+        path = handle_path(args.get("file_path"))
+        path = create_share_path(hostname or client.hostname, path)
+        username = args.get("username")
+        password = args.get("password")
+        entryID = args.get("entryID")
+        content = args.get("content")
+
+        if not entryID and not content:
+            raise DemistoException("You must provide a content to upload using one of the following arguments: content, entryID.")
+
+        client.create_session(hostname, username, password)
+
+        # For the content argument - the input is text.
+        writing_mode = "w"
+        if entryID:
+            file = demisto.getFilePath(entryID)
+            filePath = file["path"]
+            writing_mode = "wb"
+
+            with open(filePath, mode="rb") as f:
+                content = f.read()
+
+        with open_file(rf"{path}", mode=writing_mode) as file_obj:
+            file_obj.write(content)
+        return f"File {get_file_name(path)} was uploaded successfully"
+
+
+    def smb_download(client: SMBClient, args: dict):
+        hostname = args.get("hostname")
+        path = handle_path(args.get("file_path"))
+        path = create_share_path(hostname or client.hostname, path)
+        username = args.get("username")
+        password = args.get("password")
+
+        client.create_session(hostname, username, password)
+
+        with open_file(rf"{path}", mode="rb") as fd:
+            file_contents = fd.read()
+            file_name = get_file_name(path)
+            return fileResult(file_name, file_contents)
+
+
+    def smb_remove_file(client: SMBClient, args: dict):
+        hostname = args.get("hostname")
+        path = handle_path(args.get("file_path"))
+        path = create_share_path(hostname or client.hostname, path)
+        username = args.get("username")
+        password = args.get("password")
+
+        client.create_session(hostname, username, password)
+        remove(path)
+        file_name = get_file_name(path)
+        return f"File {file_name} was deleted successfully"
+
+    def exist_dir(client: SMBClient, args: dict):
+        network_folder = r"\\nade02dsv12\USAFRICOM_CIFS_User_Profile_Data"
+
+        if os.path.exists(network_folder):
+            print("Folder exists")
+        else:
+            print("Folder does not exist")
+
+    def list_dir(client: SMBClient, args: dict):
+        hostname = args.get("hostname")
+        username = args.get("username")
+        password = args.get("password")
+        path = handle_path(args.get("path"))
+        path = create_share_path(hostname or client.hostname, path)
+
+        client.create_session(hostname, username, password)
+        entries = list(scandir(path))
+
+        files = []
+        dirs = []
+
+        for entry in entries:
+            if entry.is_file():
+                files.append(entry.name)
+            if entry.is_dir():
+                dirs.append(entry.name)
+
+        context = {
+            "SharedFolder": path,
+            "Files": files,
+            "Directories": dirs,
+        }
+        return CommandResults(
+            outputs_prefix="SMB.Path",
+            outputs_key_field="SharedFolder",
+            outputs=context,
+            readable_output=tableToMarkdown(f"List Of Entries for {path}", context),
+        )
+
+
+    def smb_mkdir(client: SMBClient, args: dict):
+        hostname = args.get("hostname")
+        username = args.get("username")
+        password = args.get("password")
+        path = handle_path(args.get("path"))
+        path = create_share_path(hostname or client.hostname, path)
+
+        client.create_session(hostname, username, password)
+
+        mkdir(path)
+
+        return f"Directory: {path} was created successfully"
+
+
+    def smb_rmdir(client: SMBClient, args: dict):
+        hostname = args.get("hostname")
+        username = args.get("username")
+        password = args.get("password")
+        path = handle_path(args.get("path"))
+        path = create_share_path(hostname or client.hostname, path)
+
+        client.create_session(hostname, username, password)
+        rmdir(path)
+
+        return f"Directory: {path} was removed successfully"
+
+
+    def smb_path_rename(client: SMBClient, args: dict):
+        """
+        Renames a file or directory on an SMB server.
+
+        Args:
+            client (SMBClient): An instance of the SMBClient class.
+            args (dict): Dictionary containing 'hostname', 'username', 'password', 'src_path', 'dest_path', and optional 'overwrite'.
+
+        Returns:
+            CommandResults: Result object with context and readable output.
+        """
+        hostname = args.get("hostname")
+        username = args.get("username")
+        password = args.get("password")
+        overwrite = args.get("overwrite", "no").lower()
+
+        source_path = handle_path(args.get("src_path"))
+        destination_path = handle_path(args.get("dest_path"))
+
+        source_path = create_share_path(hostname or client.hostname, source_path)
+        destination_path = create_share_path(hostname or client.hostname, destination_path)
+
+        client.create_session(hostname, username, password)
+
+        # Check if destination exists
+        dest_exists = False
+        try:
+            smb_stat(destination_path)
+            dest_exists = True
+        except Exception:
+            pass
+
+        if dest_exists and overwrite != "yes":
+            return CommandResults(
+                readable_output=f"Skipped rename: '{destination_path}' already exists and overwrite=no.",
+                outputs={
+                    "SMBRename": {
+                        "OriginalPath": source_path,
+                        "NewPath": destination_path,
+                        "Renamed": False,
+                        "Reason": "Destination already exists and overwrite is disabled"
+                    }
+                },
+                outputs_prefix="SMBRename",
+                outputs_key_field="OriginalPath"
+            )
+
+        # Perform rename
+        rename(source_path, destination_path)
+
+        return CommandResults(
+            readable_output=f"Successfully renamed '{source_path}' to '{destination_path}'",
+            outputs={
+                "SMBRename": {
+                    "OriginalPath": source_path,
+                    "NewPath": destination_path,
+                    "Renamed": True
+                }
+            },
+            outputs_prefix="SMBRename",
+            outputs_key_field="OriginalPath"
+        )
+
+
+    def smb_copy(client: SMBClient, args: dict):
+
+        source_host = args.get("source_host")
+        destination_host = args.get("destination_host", source_host)
+        username = args.get("username")
+        password = args.get("password")
+        src_path = handle_path(args.get("source_path"))
+        dst_path = handle_path(args.get("destination_path"))
+        overwrite = args.get("overwrite", "no")
+
+        src_path = create_share_path(source_host or client.hostname, src_path)
+        dst_path = create_share_path(destination_host or client.hostname, dst_path)
+
+        client.create_session(source_host, username, password)
+        if destination_host != source_host:
+            client.create_session(destination_host, username, password)
+
+        def copy_file(src, dst):
+            dst_stat = None
+            try:
+                dst_stat = smb_stat(dst)
+            except Exception:
+                pass
+
+            if dst_stat and py_stat.S_ISDIR(dst_stat.st_mode):
+                filename = src.split("\\")[-1]
+                dst = f"{dst}\\{filename}"
+
+            if overwrite.lower() != "yes":
+                try:
+                    smb_stat(dst)
+                    demisto.info(f"Skipped (exists): {dst}")
+                    return None
+                except Exception:
+                    pass
+
+            with open_file(src, mode="rb") as src_file:
+                content = src_file.read()
+            with open_file(dst, mode="wb") as dst_file:
+                dst_file.write(content)
+
+            demisto.info(f"Copied file: {src} → {dst}")
+            return dst
+
+        def copy_directory(src_dir, dst_dir):
+            copied_files = []
+            skipped_files = []
+            copied_dirs = []
+            skipped_dirs = []
+
+            try:
+                dst_stat = smb_stat(dst_dir)
+                if py_stat.S_ISDIR(dst_stat.st_mode):
+                    demisto.info(f"Destination directory already exists: {dst_dir}")
+                    if overwrite.lower() == "yes":
+                        copied_dirs.append(dst_dir)
+                else:
+                    raise Exception("Destination exists but is not a directory")
+            except Exception:
+                mkdir(dst_dir)
+                demisto.info(f"Created destination directory: {dst_dir}")
+                copied_dirs.append(dst_dir)
+
+            for entry in scandir(src_dir):
+                src_entry = f"{src_dir}\\{entry.name}"
+                dst_entry = f"{dst_dir}\\{entry.name}"
+
+                if entry.is_file():
+                    if overwrite.lower() != "yes":
+                        try:
+                            smb_stat(dst_entry)
+                            demisto.info(f"Skipped file (exists): {dst_entry}")
+                            skipped_files.append(dst_entry)
+                            continue
+                        except Exception:
+                            pass
+                    result = copy_file(src_entry, dst_entry)
+                    if result:
+                        copied_files.append(result)
+
+                elif entry.is_dir():
+                    sub_files_copied, sub_files_skipped, sub_dirs_copied, sub_dirs_skipped = copy_directory(src_entry, dst_entry)
+                    copied_files.extend(sub_files_copied)
+                    skipped_files.extend(sub_files_skipped)
+                    copied_dirs.extend(sub_dirs_copied)
+                    skipped_dirs.extend(sub_dirs_skipped)
+
+            return copied_files, skipped_files, copied_dirs, skipped_dirs
+
+        try:
+            if "*" in src_path or "?" in src_path:
+                src_dir = "\\".join(src_path.split("\\")[:-1])
+                pattern = src_path.split("\\")[-1]
+
+                copied_files = []
+                skipped_files = []
+
+                for entry in scandir(src_dir):
+                    if entry.is_file() and fnmatch.fnmatch(entry.name.lower(), pattern.lower()):
+                        src_file_path = f"{src_dir}\\{entry.name}"
+
+                        dst_stat = None
+                        try:
+                            dst_stat = smb_stat(dst_path)
+                        except Exception:
+                            pass
+
+                        dst_is_dir = dst_stat and py_stat.S_ISDIR(dst_stat.st_mode)
+                        dst_file_path = f"{dst_path}\\{entry.name}" if dst_is_dir else dst_path
+
+                        try:
+                            if overwrite.lower() != "yes":
+                                smb_stat(dst_file_path)
+                                demisto.info(f"Skipped (exists): {dst_file_path}")
+                                skipped_files.append(dst_file_path)
+                                continue
+                        except Exception:
+                            pass
+
+                        result = copy_file(src_file_path, dst_path)
+                        if result:
+                            copied_files.append(result)
+
+                summary = f"{len(copied_files)} file(s) copied from {src_dir} to {dst_path} matching '{pattern}'"
+                if skipped_files:
+                    summary += f". {len(skipped_files)} file(s) were skipped due to overwrite=no."
+
+                context = {
+                    "SMBCopy": {
+                        "SourcePath": src_dir,
+                        "DestinationPath": dst_path,
+                        "FilesCopied": copied_files,
+                        "FoldersCopied": []
+                    }
+                }
+
+                return CommandResults(
+                    readable_output=summary,
+                    outputs=context,
+                    outputs_prefix="SMBCopy",
+                    outputs_key_field="SourcePath"
+                )
+
+            src_stat = smb_stat(src_path)
+            if py_stat.S_ISDIR(src_stat.st_mode):
+                copied_files, skipped_files, copied_dirs, skipped_dirs = copy_directory(src_path, dst_path)
+                total_copied = len(copied_files) + len(copied_dirs)
+                total_skipped = len(skipped_files) + len(skipped_dirs)
+
+                summary = f"{total_copied} item(s) copied from {src_path} to {dst_path}"
+                if total_skipped:
+                    summary += f". {total_skipped} item(s) were skipped due to overwrite=no."
+
+                context = {
+                    "SMBCopy": {
+                        "SourcePath": src_path,
+                        "DestinationPath": dst_path,
+                        "FilesCopied": copied_files,
+                        "FoldersCopied": copied_dirs
+                    }
+                }
+
+                return CommandResults(
+                    readable_output=summary,
+                    outputs=context,
+                    outputs_prefix="SMBCopy",
+                    outputs_key_field="SourcePath"
+                )
+
+            else:
+                result = copy_file(src_path, dst_path)
+                summary = f"File copied from {src_path} to {dst_path} successfully" if result else f"File skipped: {src_path} already exists and overwrite=no"
+
+                context = {
+                    "SMBCopy": {
+                        "SourcePath": src_path,
+                        "DestinationPath": dst_path,
+                        "FilesCopied": [result] if result else [],
+                        "FoldersCopied": []
+                    }
+                }
+
+                return CommandResults(
+                    readable_output=summary,
+                    outputs=context,
+                    outputs_prefix="SMBCopy",
+                    outputs_key_field="SourcePath"
+                )
+
+        except Exception as e:
+            raise DemistoException(f"Failed to copy from {src_path} to {dst_path}. Error: {e}")
+
+
+    def main():
+        params = demisto.params()
+        hostname = params["hostname"]
+        port = int(params.get("port", "445"))
+        user = params["credentials"]["identifier"]
+        password = params["credentials"]["password"]
+        encrypt = params.get("encrypt", False)
+        dc = params.get("dc", None)
+        verify = params.get("require_secure_negotiate", True)
+        client_guid = params.get("client_guid", None)
+
+        # Temporary workaround to an issue in the smbprotocol package.
+        # Git issue: https://github.com/jborean93/smbprotocol/issues/109
+        config = smbclient.ClientConfig(username=user, password=password, require_secure_negotiate=verify)
+        config.domain_controller = dc
+
+        if client_guid:
+            try:
+                client_guid = uuid.UUID(client_guid)
+                config.client_guid = client_guid
+            except ValueError:
+                demisto.info(f"Failed to convert {client_guid} to a valid UUID string. Using a random generated UUID instead")
+
+        client = SMBClient(hostname=hostname, user=user, password=password, encrypt=encrypt, port=port)
+
+        demisto.info(f"Command being called is {demisto.command()}")
+
+        try:
+            if demisto.command() == "test-module":
+                return_results(test_module(client))
+            elif demisto.command() == "smb-download":
+                return_results(smb_download(client, demisto.args()))
+            elif demisto.command() == "smb-upload":
+                return_results(smb_upload(client, demisto.args()))
+            elif demisto.command() == "smb-directory-list":
+                return_results(list_dir(client, demisto.args()))
+            elif demisto.command() == "smb-file-remove":
+                return_results(smb_remove_file(client, demisto.args()))
+            elif demisto.command() == "smb-directory-create":
+                return_results(smb_mkdir(client, demisto.args()))
+            elif demisto.command() == "smb-directory-remove":
+                return_results(smb_rmdir(client, demisto.args()))
+            elif demisto.command() == "smb-copy":
+                return_results(smb_copy(client, demisto.args()))
+            elif demisto.command() == "smb-path-rename":
+                return_results(smb_path_rename(client, demisto.args()))
+
+        except Exception as e:
+            return_error(f"Failed to execute {demisto.command()} command. Error: {e!s}")
+        finally:
+            smbclient.reset_connection_cache()
+
+
+    if __name__ in ("__main__", "__builtin__", "builtins"):
+        main()
+
+    register_module_line('Server Message Block (SMB) v2', 'end', __line__())
+  type: python
+  commands:
+  - name: smb-download
+    arguments:
+    - name: file_path
+      required: true
+      default: true
+      description: 'The path to the file, starting from the share, for example: Share/Folder/File.
+        This field is case-insensitive.'
+    - name: hostname
+      description: Server IP address / hostname.  If empty, the hostname from the
+        instance configuration is used.
+    - name: username
+      description: The username to use when creating a new SMB session. If empty,
+        the username from the instance configuration is used.
+    - name: password
+      description: The password to use for authentication. If empty, the password
+        from the instance configuration is used.
+    outputs:
+    - contextPath: File.Size
+      description: File size.
+      type: number
+    - contextPath: File.SHA1
+      description: SHA1 hash of the file.
+      type: string
+    - contextPath: File.SHA256
+      description: SHA256 hash of the file.
+      type: string
+    - contextPath: File.Name
+      description: File name.
+      type: string
+    - contextPath: File.SSDeep
+      description: SSDeep hash of the file.
+      type: string
+    - contextPath: File.EntryID
+      description: File entry ID.
+      type: string
+    - contextPath: File.Info
+      description: Information about the file.
+      type: string
+    - contextPath: File.Type
+      description: File type.
+      type: string
+    - contextPath: File.MD5
+      description: MD5 hash of the file.
+      type: string
+    description: Downloads a file from the server.
+  - name: smb-upload
+    arguments:
+    - name: file_path
+      required: true
+      default: true
+      description: 'The path to the file, starting from the share, for example: Share/Folder/File.
+        This field is case-insensitive.'
+    - name: hostname
+      description: Server IP address / hostname.  If empty, the hostname from the
+        instance configuration is used.
+    - name: username
+      description: The username to use when creating a new SMB session. If empty,
+        the username from the instance configuration is used.
+    - name: password
+      description: The password to use for authentication. If empty, the password
+        from the instance configuration is used.
+    - name: entryID
+      description: EntryID of the file to send to the share.
+    - name: content
+      description: File content to send to the share. Ignored if EntryID argument
+        is specified.
+    description: Uploads a file to the server.
+  - name: smb-directory-list
+    arguments:
+    - name: path
+      required: true
+      default: true
+      description: 'The path to the directory, starting from the share, for example:
+        Share/Folder. This field is case-insensitive.'
+    - name: hostname
+      description: Server IP address / hostname.  If empty, the hostname from the
+        instance configuration is used.
+    - name: username
+      description: The username to use when creating a new SMB session. If empty,
+        the username from the instance configuration is used.
+    - name: password
+      description: The password to use for authentication. If empty, the password
+        from the instance configuration is used.
+    outputs:
+    - contextPath: SMB.Path.SharedFolder
+      description: The full path of the shared folder.
+      type: String
+    - contextPath: SMB.Path.Files
+      description: List of files under the shared folder.
+      type: Unknown
+    - contextPath: SMB.Path.Directories
+      description: List of directories under the shared folder.
+      type: Unknown
+    description: Returns a list containing the names of the entries in the directory
+      given by path.
+  - name: smb-file-remove
+    arguments:
+    - name: file_path
+      required: true
+      default: true
+      description: 'The path to the file, starting from the share, for example: Share/Folder/File.
+        This field is case-insensitive.'
+    - name: hostname
+      description: Server IP address / hostname. If empty, the hostname from the instance
+        configuration is used.
+    - name: username
+      description: The username to use when creating a new SMB session. If empty,
+        the username from the instance configuration is used.
+    - name: password
+      description: The password to use for authentication. If empty, the password
+        from the instance configuration is used.
+    description: Removes a file from the server.
+  - name: smb-directory-create
+    arguments:
+    - name: path
+      required: true
+      default: true
+      description: 'The path to the directory, starting from the share, for example:
+        Share/NewFolder. This field is case-insensitive.'
+    - name: hostname
+      description: Server IP address / hostname. If empty, the hostname from the instance
+        configuration is used.
+    - name: username
+      description: The username to use when creating a new SMB session. If empty,
+        the username from the instance configuration is used.
+    - name: password
+      description: The password to use for authentication. If empty, the password
+        from the instance configuration is used.
+    description: Creates a new directory under the given path.
+  - name: smb-directory-remove
+    arguments:
+    - name: path
+      required: true
+      default: true
+      description: 'The path to the directory, starting from the share, for example:
+        Share/NewFolder. This field is case-insensitive.'
+    - name: hostname
+      description: Server IP address / hostname. If empty, the hostname from the instance
+        configuration is used.
+    - name: username
+      description: The username to use when creating a new SMB session. If empty,
+        the username from the instance configuration is used.
+    - name: password
+      description: The password to use for authentication. If empty, the password
+        from the instance configuration is used.
+    description: Removes a directory from the given path.
+  - name: smb-copy
+    arguments:
+    - name: source_host
+      required: true
+      description: Server that you will copy from.
+    - name: source_path
+      required: true
+      description: Directory or file name .  Also accepts wildcards * and ?
+    - name: destination_host
+      description: Server that you will copy to.  If this is left blank, it will assume
+        the destination_host is the same as the source_host
+    - name: destination_path
+      required: true
+      description: directory or file name .
+    - name: overwrite
+      description: If files exist at the destination location should it overwrite.
+    description: Copies files and directories from one location to another.
+  - name: smb-path-rename
+    arguments:
+    - name: hostname
+      required: true
+    - name: src_path
+      required: true
+    - name: dest_path
+      required: true
+    - name: overwrite
+      auto: PREDEFINED
+      predefined:
+      - "yes"
+      - "no"
+    description: '    Renames a file or directory on an SMB server.'
+  dockerimage: demisto/smbprotocol:1.0.0.2035850
+  runonce: false
+  subtype: python3
+sourcemoduleid: Server Message Block (SMB) v2
